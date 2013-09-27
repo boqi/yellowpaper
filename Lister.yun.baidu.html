@@ -153,20 +153,34 @@
 <div class='content' id='content'>
 <ul id='lists' class='Lists'></ul>
 </div>
- <style type="text/css">
-
-</style>
 <script type="text/javascript">
 
-	setTitle("Yello Page");
-	var pub = new Lister("Pages");
+	setTitle("Sharings on cloud of BAIDU");
+	var pub = new Lister("Public sharing");
 	pub.append();
-
-	function add(name,link) {
-		var html = name + '：<a href="' + link + '">' + link + '</a>';
-		pub.add(html);
+	var pri = new Lister("Private sharing");
+	pri.append();
+	function add(name,link,code) {
+		var html = '<ul>' + name + 
+			'<li>Link:  <a href="' + link + '">' + link + '</a></li>' +
+			(code ? '<li>Code: ' + code + '</li>' : '') +
+			'</ul>';
+		if(code) {
+			pri.add(html);
+		}
+		else {
+			pub.add(html);
+		}
 	}
-	add('Sharings on cloud of BAIDU','Lister.yun.baidu.html');
+	add('[bitspool] To Bitsero',"http://pan.baidu.com/s/1efk1X",'enkz');
+	add('[bitspool] bitspool',"http://pan.baidu.com/s/1uZGs6",'gp8q');
+    add('[bitsero]  Trash',"http://pan.baidu.com/share/link?shareid=588078639&amp;uk=1715223785&amp;ss=x3e9",'x3e9');
+	add('[bitsero]  Torrent',"http://pan.baidu.com/share/link?shareid=2848292671&amp;uk=1715223785&amp;ss=sp5a",'sp5a');
+	add('[bitsero1]',"http://pan.baidu.com/share/link?shareid=2928126089&amp;uk=859618279&amp;ss=5ly9",'5ly9');
+	add('[bitsero2]',"http://pan.baidu.com/share/link?shareid=3002557619&amp;uk=4147939047&amp;ss=nswg",'nswq');
+	add('[bitsero3]',"http://pan.baidu.com/share/link?shareid=3126104801&amp;uk=4231793383&amp;ss=ooae",'ooae');
+	add('[bitsero4]','http://pan.baidu.com/share/link?shareid=3479784523&amp;uk=4282156263&amp;ss=9cvi','9cvi');
+			
 </script>
 </body>
 </html>
